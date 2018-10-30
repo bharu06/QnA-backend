@@ -3,8 +3,9 @@
  * Expose
  */
 
+const dbName = "qna";
 module.exports = {
-  db: 'mongodb://localhost/your_project_development',
+  db: `mongodb://localhost/${dbName}`,
   facebook: {
     clientID: 'APP_ID',
     clientSecret: 'SECRET',

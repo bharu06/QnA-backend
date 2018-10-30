@@ -5,6 +5,7 @@
  */
 
 const home = require('../app/controllers/home');
+const events = require('../app/controllers/events');
 
 /**
  * Expose
@@ -17,15 +18,8 @@ module.exports = function (app, passport) {
   // TODO: Add Authentication.
   // Write actions in the controller.
   app.route('/events')
-    .get((req, res) => {
-      console.log("Test Get Events");
-      // TODO: Returns list of events for the specific user.
-    })
-    .post((req, res) => {
-      console.log("Test Post Events");
-      console.log(req);
-      // TODO: Store the specific event created.
-    })
+    .get(events.getIndex)
+    .post(events.postIndex)
     .put((req, res) => {
       console.log("Test Put Events");
       // TODO: Edit the specific event.
