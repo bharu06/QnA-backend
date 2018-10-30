@@ -6,6 +6,7 @@ const QuestionSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Event'
   },
+  text: String,
   upvotes: Number,
   createdAt: { type: Date, default: Date.now },
 });
